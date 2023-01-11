@@ -1,0 +1,12 @@
+{
+   "input": {
+      "text": "Hello, World!"
+   },
+   "voice": {
+      "languageCode": "en-US",
+      "name": "en-US-Neural2-A"
+   },
+   "audioConfig": {
+      "audioEncoding": "MP3"
+   }
+}
