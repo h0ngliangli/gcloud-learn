@@ -20,7 +20,7 @@
     <p>exapmles</p>
     <ul>
       <li v-for="e in examples">
-        <p @click="speak(e)" :class="speaking: m==speaking">{{e}}</p>
+        <p @click="speak(e)" :class="{speaking: e==speaking}">{{e}}</p>
       </li>
     </ul>
     <div v-if="speaking">speaking: {{speaking}}</div>
