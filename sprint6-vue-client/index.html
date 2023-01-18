@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <!-- meta charset tells the browser how to decode
+             the html text -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- vue script from CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body id="app">
+    <h1>{{word}}</h1>
+    <ul>
+      <li v-for="img in imgs"><img v-bind:src="img" /></li>
+    </ul>
+    <ul>
+      <li v-for="m in meanings" :class="{speaking: m==speaking}">
+        <p @click="speak(m)">{{m}}</p>
+      </li>
+    </ul>
+    <p>exapmles</p>
+    <ul>
+      <li v-for="e in examples">
+        <p @click="speak(e)" :class="speaking: m==speaking">{{e}}</p>
+      </li>
+    </ul>
+    <div v-if="speaking">speaking: {{speaking}}</div>
+    <script src="./main.js"></script>
+  </body>
+</html>
